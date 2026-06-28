@@ -1,0 +1,9 @@
+[
+  {
+    "title": "LocoManip: Loco-Manipulation with Humanoid Robots",
+    "authors": ["A. Author", "B. Builder"],
+    "url": "https://arxiv.org/abs/2601.00001",
+    "pdf_url": "https://arxiv.org/pdf/2601.00001",
+    "abstract": "Humanoid locomotion and manipulation with a whole-body controller."
+  }
+]

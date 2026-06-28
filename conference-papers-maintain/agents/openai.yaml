@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Papers Maintain"
+  short_description: "Maintain paper site data and links"
+  default_prompt: "Use $conference-papers-maintain to add papers, merge topics, resolve links, and rebuild the site."

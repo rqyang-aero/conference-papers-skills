@@ -1,0 +1,21 @@
+{
+  "site": {
+    "title": "My Conference Paper Atlas",
+    "data_dir": "data",
+    "output_dir": "dist"
+  },
+  "defaults": {
+    "conference": "CVPR",
+    "year": 2026,
+    "topics": ["VLA", "Humanoid", "locomotion", "loco-manipulation"]
+  },
+  "sources": [
+    {
+      "name": "cvpr-2026",
+      "conference": "CVPR",
+      "year": 2026,
+      "type": "cvf",
+      "url": "https://cvpr.thecvf.com/virtual/2026/papers.html"
+    }
+  ]
+}

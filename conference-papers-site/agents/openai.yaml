@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Papers Site"
+  short_description: "Build the static paper website"
+  default_prompt: "Use $conference-papers-site to rebuild the static conference paper website and search index."

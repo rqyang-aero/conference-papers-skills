@@ -1,0 +1,34 @@
+{
+  "site": {
+    "title": "Conference Papers",
+    "data_dir": "data",
+    "output_dir": "dist"
+  },
+  "defaults": {
+    "conference": "CVPR",
+    "year": 2026,
+    "topics": ["VLA", "Humanoid", "locomotion", "loco-manipulation"]
+  },
+  "sources": [
+    {
+      "name": "cvpr-2026",
+      "conference": "CVPR",
+      "year": 2026,
+      "type": "cvf",
+      "url": "https://cvpr.thecvf.com/virtual/2026/papers.html"
+    }
+  ],
+  "topic_keywords": {
+    "VLA": [
+      "vla",
+      "vision language action",
+      "vision-language-action",
+      "vision-language action",
+      "language-conditioned policy",
+      "language conditioned policy"
+    ],
+    "Humanoid": ["humanoid", "whole-body", "whole body", "biped", "legged robot"],
+    "locomotion": ["locomotion", "locomotor", "walking", "gait", "legged"],
+    "loco-manipulation": ["loco-manipulation", "loco manipulation", "mobile manipulation"]
+  }
+}

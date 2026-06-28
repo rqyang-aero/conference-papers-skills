@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Papers"
+  short_description: "Build searchable paper reading sites"
+  default_prompt: "Use $conference-papers to build a searchable HTML reading site from conference papers."

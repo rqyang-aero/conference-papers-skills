@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Papers Fetch"
+  short_description: "Fetch conference paper candidates"
+  default_prompt: "Use $conference-papers-fetch to fetch topic-matched conference papers into site data."

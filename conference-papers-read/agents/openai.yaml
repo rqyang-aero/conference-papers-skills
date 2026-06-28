@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Papers Read"
+  short_description: "Read papers into structured notes"
+  default_prompt: "Use $conference-papers-read to turn selected conference papers into structured site notes."
