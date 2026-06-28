@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Papers Read2MD"
+  short_description: "Generate Obsidian paper notes"
+  default_prompt: "Use $conference-papers-read2md to read a paper JSON and generate an Obsidian-compatible deep-reading Markdown note."

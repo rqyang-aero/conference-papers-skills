@@ -8,25 +8,48 @@ ROOT = Path(__file__).resolve().parents[2]
 
 
 EXPECTED = {
-    "conference-papers-fetch": ["crawl_conference.py", "add_papers.py", "enrich_arxiv.py"],
-    "conference-papers-read": ["generate_note_data.py", "paper-reader", "validate_notes.py"],
-    "conference-papers-site": ["build_site.py"],
-    "conference-papers-maintain": [
-        "add_papers.py",
-        "classify_topics.py",
-        "enrich_arxiv.py",
-        "enrich_fulltext.py",
-        "archive_figures.py",
-        "validate_notes.py",
-        "resolve_links.py",
-        "build_site.py",
-    ],
+    "conference-papers-fetch": {
+        "core_delegate": True,
+        "terms": ["crawl_conference.py", "add_papers.py", "enrich_arxiv.py"],
+    },
+    "conference-papers-read": {
+        "core_delegate": True,
+        "terms": ["generate_note_data.py", "paper-reader", "validate_notes.py"],
+    },
+    "conference-papers-read2md": {
+        "core_delegate": False,
+        "terms": [
+            "paper_json_context.py",
+            "localize_note_images.py",
+            "paper-note-template.md",
+            "data/_inbox",
+            "Obsidian",
+            "standalone",
+        ],
+    },
+    "conference-papers-site": {
+        "core_delegate": True,
+        "terms": ["build_site.py"],
+    },
+    "conference-papers-maintain": {
+        "core_delegate": True,
+        "terms": [
+            "add_papers.py",
+            "classify_topics.py",
+            "enrich_arxiv.py",
+            "enrich_fulltext.py",
+            "archive_figures.py",
+            "validate_notes.py",
+            "resolve_links.py",
+            "build_site.py",
+        ],
+    },
 }
 
 
 class WrapperSkillTests(unittest.TestCase):
     def test_wrapper_skills_exist_and_delegate_to_core(self) -> None:
-        for name, required_terms in EXPECTED.items():
+        for name, expectation in EXPECTED.items():
             with self.subTest(name=name):
                 skill_dir = ROOT / name
                 skill_md = skill_dir / "SKILL.md"
@@ -37,8 +60,9 @@ class WrapperSkillTests(unittest.TestCase):
                 text = skill_md.read_text(encoding="utf-8")
                 self.assertIn(f"name: {name}", text)
                 self.assertIn("description: Use when", text)
-                self.assertIn("../conference-papers", text)
-                for term in required_terms:
+                if expectation["core_delegate"]:
+                    self.assertIn("../conference-papers", text)
+                for term in expectation["terms"]:
                     self.assertIn(term, text)
 
                 ui = agent_yaml.read_text(encoding="utf-8")
