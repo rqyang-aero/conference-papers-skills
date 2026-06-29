@@ -25,6 +25,8 @@ EXPECTED = {
             "data/_inbox",
             "Obsidian",
             "standalone",
+            "online images by default",
+            "optional localization",
         ],
     },
     "conference-papers-site": {

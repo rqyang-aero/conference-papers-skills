@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Localize Markdown image URLs for conference-papers-read2md inbox notes.
+"""Optional image archive tool for conference-papers-read2md inbox notes.
 
 Adapted from huangkiki/dailypaper-skills `download_note_images.py`.
-Changes for this project: always stores images beside the generated inbox note
-under `assets/` and rewrites links as Obsidian wikilinks.
+Changes for this project: when explicitly invoked, stores images beside the
+generated inbox note under `assets/` and rewrites links as Obsidian wikilinks.
 """
 
 from __future__ import annotations
@@ -109,7 +109,9 @@ def process_note(
 
 
 def main() -> int:
-    parser = argparse.ArgumentParser(description="Download inbox note images and rewrite links for Obsidian.")
+    parser = argparse.ArgumentParser(
+        description="Optionally archive inbox note images and rewrite links for Obsidian."
+    )
     parser.add_argument("note", type=Path, help="Markdown note path.")
     parser.add_argument("--assets-subdir", default="assets")
     parser.add_argument("--width", type=int, default=DEFAULT_WIDTH)
