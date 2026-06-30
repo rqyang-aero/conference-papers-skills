@@ -29,6 +29,21 @@ EXPECTED = {
             "optional localization",
         ],
     },
+    "conference-papers-readsimply": {
+        "core_delegate": False,
+        "terms": [
+            "paper_json_context.py",
+            "batch_paper_json_context.py",
+            "arxiv_html_metadata.py",
+            "paper-note-template.md",
+            "data/_inbox",
+            "Obsidian",
+            "abstract only",
+            "arxiv_html_abstract",
+            "batch",
+            "MethodName-simple.md",
+        ],
+    },
     "conference-papers-site": {
         "core_delegate": True,
         "terms": ["build_site.py"],

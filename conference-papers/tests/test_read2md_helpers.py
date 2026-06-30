@@ -13,6 +13,8 @@ READ2MD_TEMPLATE = READ2MD_SKILL / "assets" / "paper-note-template.md"
 READ2MD_SKILL_MD = READ2MD_SKILL / "SKILL.md"
 READ2MD_LOCALIZE_SCRIPT = READ2MD_SKILL / "scripts" / "localize_note_images.py"
 READ2MD_SCRIPTS = ROOT / "conference-papers-read2md" / "scripts"
+for module_name in ("localize_note_images", "paper_json_context"):
+    sys.modules.pop(module_name, None)
 sys.path.insert(0, str(READ2MD_SCRIPTS))
 
 from localize_note_images import process_note  # noqa: E402

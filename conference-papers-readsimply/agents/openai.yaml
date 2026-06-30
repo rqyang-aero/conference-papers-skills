@@ -1,0 +1,4 @@
+interface:
+  display_name: "Conference Papers ReadSimply"
+  short_description: "Generate arXiv-abstract-only Obsidian paper notes"
+  default_prompt: "Use $conference-papers-readsimply to generate abstract-only Obsidian Markdown notes from one or more paper JSON files, using arXiv HTML abstract metadata when available."
